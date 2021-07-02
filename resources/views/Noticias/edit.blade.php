@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-20">
             <div class="card">
-                <div class="card-header">{{ __('Noticias') }}</div>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Publicidad') }}</legend>
 <div class="card-body">
 
 <a href="{{ route('Noticias.show', $modelo->id) }}">Regresar</a> <br> <br>
@@ -43,7 +43,7 @@
 </div>
 
 
-    {{ Form::submit('Actualizar Noticia', array('class' => 'btn btn-primary')) }}
+    {{ Form::submit('Actualizar Publicidad', array('class' => 'btn btn-primary')) }}
 
 {{ Form::close() }}
 </div>

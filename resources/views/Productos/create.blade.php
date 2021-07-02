@@ -62,7 +62,7 @@
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-key bigicon"></i></span>
                                 <div class="col-md-8">
-                                    {{ Form::label('categorias_id', 'Género del Producto') }}
+                                    {{ Form::label('categorias_id', 'Categoria del Producto') }}
                                     {{ Form::select('categorias_id', $tableProductos, Request::old('categorias_id'),  
                                         array('class' => 'form-control')) }}
                                 </div>

@@ -4,20 +4,20 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-15">
+        <div class="col-md-9">
             <div class="card">
-                <div class="card-header">{{ __('Noticias') }}</div>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Publicidad') }}</legend>
 <div class="card-body">
     
-<a href="{{route('Noticias.create')}}">Registrar Noticia</a> <br> <br>
+<a href="{{route('Noticias.create')}}">Registrar Publicidad</a> <br> <br>
 @if(Session::has('message'))
       {{ Session::get('message') }} <br><br>
 @endif
-<table class="table table-striped">
+<table class="table table-striped justify-content-center">
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Descripcion</th>
+            <th>Nombre</th> 
+            <th>Descripción</th>
             <th>Fuente</th>
             <th>Portada</th>
         </tr>

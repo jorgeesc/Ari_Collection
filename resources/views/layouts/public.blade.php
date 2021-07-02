@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dataplay: Sistema y gestión de videojuegos</title>
+        <title>Ari Collection</title>
         <link rel="icon" type="image/x-icon" href="../assets/img/DATAPLAY.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -78,6 +78,8 @@
                   
                 </div>
             </div>
+
+            
         </header>
         <section class="contact-section bg-black">
             <div class="container">
@@ -90,7 +92,7 @@
 
         <!-- @yield('content') -->
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © DATAPLAY 2020</div></footer>
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Ari Collection 2021</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>

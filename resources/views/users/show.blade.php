@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">{{ __('Usuarios') }}</div>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Actualización de usuario') }}</legend>
 <div class="card-body">
 
 <a href="{{route('users.index')}}">Inicio</a> <br><br>

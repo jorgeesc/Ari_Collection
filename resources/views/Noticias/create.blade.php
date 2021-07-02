@@ -5,13 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-20">
             <div class="card">
-                <div class="card-header">{{ __('Noticias') }}</div>
+                  <legend class="card header text-white bg-info mb-2 text-center">{{ __('Publicidad') }}</legend>
 <div class="card-body">
 
 
 <a href="{{ URL::to('Noticias') }}">Regresar</a> <br> <br>
 
-<h5>Formulario de creación</h5>
+<h5>Formulario de creación</h5><br>
 
 {{ HTML::ul($errors->all()) }}
 
@@ -26,7 +26,7 @@
     </div> <br> <br>
 
 <div class="form-group col-md-4">
-        {{ Form::label('descripcion', 'Descripcion de noticia') }}
+        {{ Form::label('descripcion', 'Descripcion') }}
         {{ Form::textArea('descripcion', Request::old('descripcion'),
            array('class' => 'form-control', 'required'=>true, 'maxlength'=> 200)) }}
     </div> <br> <br>
@@ -43,7 +43,7 @@
 
 </div>
 
-    {{ Form::submit('Registrar Noticia', ['class' => 'btn btn-primary'] ) }}
+    {{ Form::submit('Registrar Publicidad', ['class' => 'btn btn-primary'] ) }}
 
 {{ Form::close() }}
 </div>

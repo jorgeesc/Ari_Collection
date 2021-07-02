@@ -7,7 +7,7 @@
             <div class="card border-info mb-3" style="max-width: 65rem;">
                 <legend class="card header text-white bg-info mb-2 text-center">{{ __('Actualización de Productos') }}</legend>
                     <div class="card-body text-info">
-                        <a href="{{ route('Juegos.show', $modelo->id) }}"> Regresar</a><br><br>
+                        <a href="{{ route('Productos.show', $modelo->id) }}"> Regresar</a><br><br>
                             {{HTML::ul($errors->all())}}
 
                             {{ Form::model( $modelo, array('route' => array('Productos.update', $modelo->id), 'method' => 'PUT', 'enctype' => 'multipart/form-data') ) }}
@@ -62,19 +62,12 @@
                             <div class="form-group">
                                 <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-genderless bigicon"></i></span>
                                 <div class="col-md-8">
-                                    {{ Form::label('genero_id', 'Género del Juego') }}
-                                    {{ Form::select('genero_id', $tableJuegos, Request::old('genero_id'),  
+                                    {{ Form::label('categorias_id', 'categoria del producto')}}
+                                    {{ Form::select('categorias_id', $tableProductos, Request::old('categorias_id'),  
                                         array('class' => 'form-control')) }}
                                 </div>
                             </div>
-                       <!--      <div class="form-group">
-                                <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-copyright bigicon"></i></span>
-                                <div class="col-md-8">
-                                    {{ Form::label('proveedor_id', 'Proveedor del Juego') }}
-                                    {{ Form::select('proveedor_id', $tableJuegosP, Request::old('proveedor_id'),  
-                                        array('class' => 'form-control')) }}
-                                </div>
-                            </div>    -->         
+                               
                             <div class="form-group">
                                 <div class="col-md-12 text-left">
                                     {{ Form::submit('Actualizar Producto', ['class' => 'btn btn-success'] ) }}

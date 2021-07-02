@@ -120,7 +120,7 @@ class productosController extends Controller
     {
         $modelo = Productos::find($id);
         $tableProductos = Categoria::orderBy('nombre')->get()->pluck('nombre','id');
-        return view('Productos.edit', ["modelo" => $modelo, "tableProductos"=>$tableProductos, 'tableProductosP' => $tableProductosP]);
+        return view('Productos.edit', ["modelo" => $modelo, "tableProductos"=>$tableProductos]);
     }
 
     /**

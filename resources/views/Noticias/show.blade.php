@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Noticias') }}</div>
+               <legend class="card header text-white bg-info mb-2 text-center">{{ __('Publicidad') }}</legend>
 <div class="card-body">
 
 
@@ -14,7 +14,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Información de Noticias</th>
+            <th>Información de Publicidad</th>
             <th>
                 {{ Form::open(array('url' => route('Noticias.destroy', $modelo->id), 'class' => 'pull-right')) }}
                     <a class="btn btn-primary" href="{{route('Noticias.edit', $modelo->id)}}">Editar</a>
@@ -25,8 +25,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td>''Título</td><td>{{$modelo->nombre}}</td></tr>
-            <tr><td> Descripcion de la Noticia </td> <td>{{$modelo->descripcion}}</td></tr>
+        <tr><td> Título</td><td>{{$modelo->nombre}}</td></tr>
+            <tr><td> Descripción</td> <td>{{$modelo->descripcion}}</td></tr>
         <tr><td> Fuente </td> <td>{{$modelo->fuente}}</td></tr>
             <tr><td> Fecha de registro </td> <td>{{$modelo->created_at}}</td></tr>
             <tr><td> Fecha de modificación </td> <td>{{$modelo->updated_at}}</td></tr>

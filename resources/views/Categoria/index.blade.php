@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">{{ __('Categoria') }}</div>
+            <div class="card border-info mb-3" style="max-width: 65rem; , max-heigth: 60rem;">
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Categoría') }}</legend>
 <div class="card-body">
     
 <a href="{{route('Categoria.create')}}">Registrar Categoria</a> <br> <br>
