@@ -1,98 +1,60 @@
-@extends('layouts.admin')
+@extends('layouts.usuario')
 @section('content')
-
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Conocenos</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <title></title>
 </head>
+<body>
 
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
-<div class="container ">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card bg-black color">
-                <div class="card-header"><h1><center>{{ __('FILOSOFÍA') }}</center></h1></div>
-<div class="card-body ">
+<div class="social1">
+    <ul>
+      <li><a href="https://www.facebook.com/Bolsas-Ari-Collection-392119227638056/" target="_blank" class="icon-facebook2"></a></li>
+      <li><a href="https://www.instagram.com/bolsas_ari_collection/" target="_blank" class="icon-instagram"></a></li>
+      <li><a href="mailto:modayestilo.ari@gmail.com" class="icon-google-plus2"></a></li>
+    </ul>
+  </div>
 
-<div class="container-fluid bg-black color" >
-  <div class="row">
-    <nav class="col-sm-3 col-4" id="myScrollspy">
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item new">
-          <a class="nav-link new2 active" href="#section1">DATAPLAY</a>
-        </li>
-        <li class="nav-item new">
-          <a class="nav-link new2" href="#section3">MISIÓN</a>
-        </li>
-        <li class="nav-item new">
-          <a class="nav-link new2" href="#section4">VISIÓN</a>
-        </li>
-        <li class="nav-item new">
-          <a class="nav-link new2" href="#section5">VALORES</a>
-        </li>
-        <li class="nav-item dropdown">
-          
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#section41">Link 1</a>
-            <a class="dropdown-item" href="#section43">Link 3</a>
-            <a class="dropdown-item" href="#section44">Link 4</a>
-            <a class="dropdown-item" href="#section45">Link 5</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <div class="col-sm-9 col-7">
-      <div id="section1" class="bg-black color" >    
-        <h1>DATAPLAY</h1>
-        <p>Nuestro principal interés es mantenerte informado sobre 
-        los diferentes videojuegos y las noticias más interesantes 
-        de las compañías de videojuegos más grandes del mundo. 
-        En este sitio podras:
-
-
- 
-
-
- 
-        </p>
-        <li>Contenido útil y fácil de entender.</li>
-        <li>Visualización en diferentes dispositivos (adaptable).</li>
-        <li>Mantente informado sobre tus títulos favoritos.</li>
-        <li>Encuentra los juegos de tu agrado.</li>
-        <li>Las noticias de mayor relevancia entorno a los videojuegos.</li><br>
-      </div><br>
-      <div id="section2" class="bg-black color"> 
-        <h1>Nuestro logo</h1><br>
-        <center><img src="../assets/img/DATAPLAY.png" alt="" style="padding:5px; margin:5px; width:300px; height:300px;"></center><br>
-      </div><br> 
-      <div id="section3" class="bg-black color"> 
-        <h1>Misión</h1>
-        <p>Somos un grupo de estudiantes universitarios del área de tecnologías de la información enfocados en el diseño y desarrollo web, tratando de innovar en el área del e-commerce, buscamos liderar la venta de videojuegos en línea con un sitio visualmente atractivo haciendo uso de temáticas “gaming” y que sea lo más intuitivo para el usuario.<br></p>
-      </div>    <br>    
-      <div id="section4" class="bg-black color">         
-        <h1>Visión</h1>
-        <p>Buscamos estar bien posicionados en el e-commerce, al ser jóvenes siempre buscamos la competencia y mejorar la calidad en nuestro sitio, además de querer aprender de las nuevas tecnologías buscamos siempre estar actualizados e innovando y que nuestro trabajo genere eco en las empresas de desarrollo de videojuegos para así poder tener su confianza y nos permitan distribuir sus productos, creemos que nuestra ambición por ser los mejores es nuestra principal inspiración para llegar a serlo, buscando siempre la mejor atención para nuestros clientes.<br></p>
-      </div><br>
-      <div id="section5" class="bg-black color">         
-        <h1>Valores</h1>
-        <li>Colaboración.</li>
-        <li>Aprendizaje.</li>
-        <li>Excelencia.</li>
-        <li>Pasión.</li>
-        <li>Desarrollo.</li>
-        <li>Innovación.</li>
-        <li>Calidad.</li>
-        <li>Usabilidad.</li>
-        <li>Creatividad.</li><br>
-      </div>
-     
+<div class="card text-center col-sm-4" style="margin-bottom:20px; margin-right: 45px;">
+  <div class="card-header" style="font-family:cursive,sans-serif;background-color: #ff388d; color: white;">
+    Nos encontramos en:
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" style="font-family:cursive,sans-serif;color: #ff388d;font-size: 35px;">Localización</h5>
+    <p class="card-text" style="font-family:cursive,sans-serif;font-size: 20px;">Cuautla 120,<br> Killian, 37260 <br> León, Gto.</p>
+<h5 class="card-title" style="font-family:cursive,sans-serif;color: #ff388d;font-size: 35px;">Contacto</h5>
+<p class="card-text" style="font-family:cursive,sans-serif;font-size: 20px;">+52 477-323-8472</p>
+  </div>
+  <div class="card-footer text-muted">
+    Contactanos
   </div>
 </div>
 
-</body>
+<!-- --------------------------------------------- -->
+<div class="card text-center col-sm-7" style="margin-bottom:20px;">
+  <div class="card-header" style="font-family:cursive,sans-serif;background-color: #ff388d; color: white;">
+    Nos encontramos en:
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" style="font-family:cursive,sans-serif;color: #ff388d; font-size: 35px;">Horario</h5>
+    <p class="card-text" style="font-family:cursive,sans-serif;font-size: 20px;">
+Sabado 9:00 AM a 7:00 PM <br>
+Lunes  9:00 AM a 7:00 PM <br>
+Martes  9:00 AM a 7:00 PM <br>
+Miercoles 9:00 AM a 7:00 PM <br>
+Jueves  9:00 AM a 7:00 PM <br>
+Viernes    9:00 AM a 7:00 PM  </p>
+    
+  </div>
+  <div class="card-footer text-muted">
+    Contactanos
+  </div>
+</div>
 
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.727227239374!2d-101.6626146!3d21.123438399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbfef6364a0b5%3A0x64125aee1abe98f3!2sAri%20collection!5e0!3m2!1sen!2smx!4v1626546364338!5m2!1sen!2smx" width="99%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<br>
+</body>
+</html>
 
 @endsection
 

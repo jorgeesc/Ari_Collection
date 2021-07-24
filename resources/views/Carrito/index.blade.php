@@ -33,6 +33,10 @@
             <td>{{$rowcarro['precio']}}</td>
             <td>{{$rowcarro['cantidad']}}</td>
 
+            s
+
+
+
 
     
         </tr>
@@ -46,13 +50,13 @@
 
     {{ Form::open(['url' => 'ConcretarVenta'] ) }} <br>
 
-{{ Form::submit('Concretar venta',['class' => 'btn btn-primary btn-lg btn-block' , 'role' => 'button' , 'aria-pressed' => 'true'] ) }}
+{{ Form::submit('Concretar venta',['class' => 'btn btn-info' , 'role' => 'button' , 'aria-pressed' => 'true'] ) }}
 {{ Form::close()}} <br>
 
 
 {{ Form::open(['url' => 'quitarCarrito'] ) }}
 
-{{ Form::submit('Vaciar Carrito',['class' => 'btn btn-danger btn-lg btn-block' , 'role' => 'button' , 'aria-pressed' => 'true'] ) }}
+{{ Form::submit('  Vaciar Carrito  ',['class' => 'btn btn-warning' , 'role' => 'button' , 'aria-pressed' => 'true'] ) }}
 {{ Form::close()}}
 </div>
                 </div>

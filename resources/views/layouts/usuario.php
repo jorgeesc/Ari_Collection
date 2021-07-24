@@ -53,11 +53,11 @@
                         
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Productos.index') }}">Productos</a></li>
 
-                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Noticias.index') }}">Noticias</a></li>
+                        <!--  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Noticias.index') }}">Noticias</a></li>
 
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Conocenos.index') }}">Conocenos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Conocenos.index') }}">Conocenos</a></li> -->
 
-                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Carrito.index') }}">Carrito</a></li>
+                          <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Carrito.index') }}">Carrito</a></li> -->
                         
                         @endif
                           @guest
@@ -107,7 +107,7 @@
         <!-- Masthead-->
 
 
-        <section class="signup-admin">
+        <section class="signup-usuario">
             <div class="container">
                 <!-- Featured Project Row-->
                 <div class="row">

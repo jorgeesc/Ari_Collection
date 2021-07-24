@@ -8,8 +8,9 @@ use Session;
 Use Redirect;
 use Illuminate\Support\Facades\DB;
 use App\Models\Productos;
-// use App\Models\Proveedor;
+use App\Models\Proveedor;
 use App\Models\Categoria;
+use App\Models\userEloquent;
 // use App\Models\venta;
 // use App\Models\detalle_venta;
 
@@ -29,6 +30,8 @@ class productosController extends Controller
      */
     public function index(Request $request)
     {
+        if ( \Auth::user()->rol_id == 2) {
+        
         $tableProductos = DB::table('productos')
         ->join('categorias', 'productos.categorias_id', '=', 'categorias.id')
         ->select('productos.*', 'categorias.nombre as categorias')
@@ -41,9 +44,15 @@ class productosController extends Controller
 		}
 		$tableProductos = Productos::orderBy('nombre')->where($whereClause)->get();
 		return view('Productos.index', ["tableProductos" => $tableProductos, "filtroNombre" => $request->nombre ]);
-
-
         return view('Productos.index', ["tableProductos" =>  $tableProductos ]);
+    }else{
+        $tableProductos = DB::table('productos')
+        ->join('categorias', 'productos.categorias_id', '=', 'categorias.id')
+        ->select('productos.*', 'categorias.nombre as categorias')
+        ->get();
+        
+        return view('Productos.ProductosU', ["tableProductos" =>  $tableProductos ]);
+    }
     }
 
     /**
@@ -53,8 +62,11 @@ class productosController extends Controller
      */
     public function create()
     {
-        $tableProductos = Categoria::orderBy('nombre')->get()->pluck('nombre','id');        
-        return view('Productos.create',[ 'tableProductos' => $tableProductos]);
+        $tableProductos = Categoria::orderBy('nombre')->get()->pluck('nombre','id');
+        $tablePProductos = Proveedor::orderBy('nombre')->get()->pluck('nombre','id');               
+         return view('Productos.create',[ 'tableProductos' => $tableProductos ,'tablePProductos' => $tablePProductos]);
+
+
 
     }
 
@@ -192,8 +204,9 @@ class productosController extends Controller
         'id' => $request->id,
         'cantidad' =>intval($request->cantidad),
         'precio' => intval($request->precio),
-        'nombre' => $request->nombre
+        'nombre' => $request->nombre,
         ] );
+  
         $request->session()->put('carrito', $carrito);
         // echo var_dump($carrito);
 
@@ -229,6 +242,9 @@ class productosController extends Controller
         $venta->total=0;
         $venta->save();
 
+
+
+
       foreach ($carrito as $value) {
             $detalle_venta=new detalle_venta();
             $detalle_venta->cantidad=$value['cantidad'];
@@ -240,9 +256,9 @@ class productosController extends Controller
             $venta->total+=($value['precio']*$value['cantidad']);
 
 
-            $juego=Productos::find($value['id']);
-            $juego->stock-=($value['cantidad']);
-            $juego->save();
+            $producto=Productos::find($value['id']);
+            $producto->stock-=($value['cantidad']);
+            $producto->save();
         }
 
 

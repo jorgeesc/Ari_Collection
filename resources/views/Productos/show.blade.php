@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.usuario')
 @section('content')
 @if( \Auth::user()->rol_id== 2 )
 
@@ -46,19 +46,28 @@
 
 @else
 
-
-<div class="container">
+<div class="social1">
+    <ul>
+      <li><a href="https://www.facebook.com/Bolsas-Ari-Collection-392119227638056/" target="_blank" class="icon-facebook2"></a></li>
+      <li><a href="https://www.instagram.com/bolsas_ari_collection/" target="_blank" class="icon-instagram"></a></li>
+      <li><a href="mailto:modayestilo.ari@gmail.com" class="icon-google-plus2"></a></li>
+    </ul>
+  </div>
+<div class="containerr">
     <div class="row justify-content-center">
-        <div class="col-md-5">
+        <div class="col-md-7">
             <div class="card">
-                <h1><div class="card-header">{{$modelo->nombre}}</div></h1>
+                <center><h2><div style="font-family:cursive,sans-serif;background-color: #ff388d;" class="card-header text-white">{{$modelo->nombre}}</div></h2></center>
+
+
 <div class="card-body">
+	<a class="btn-lg text-white" style="font-family:cursive,sans-serif;background-color:#ff388d;" href="{{route('Productos.index')}}">Inicio</a> <br><br>
 
           <center><td><img src="{{ asset('storage/'.$modelo->imgNombreFisico )}}" width="90%"></td></center><br>
-            <h5>Descripción:</td> <td>{{$modelo->descripcion}}<br></h5>
-             <h5>Precio: </td> <td>{{$modelo->precio}}<br></h5>
-             <h5>Stock: </td> <td>{{$modelo->stock}}<br></h5>
-             <h5>Cat: </td> <td>{{$modelo->getCategoria->nombre}}<br></h5>
+            <h5 style="font-family:cursive,sans-serif; color: #ff388d;">Descripción:</td> <td>{{$modelo->descripcion}}<br></h5>
+             <h5 style="font-family:cursive,sans-serif; color: #ff388d;">Precio: </td> <td>{{$modelo->precio}}<br></h5>
+             <h5 style="font-family:cursive,sans-serif; color: #ff388d;">Stock: </td> <td>{{$modelo->stock}}<br></h5>
+             <h5 style="font-family:cursive,sans-serif; color: #ff388d;">Cat: </td> <td>{{$modelo->getCategoria->nombre}}<br></h5>
              
 
 

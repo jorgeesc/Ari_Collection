@@ -67,6 +67,15 @@
                                         array('class' => 'form-control')) }}
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-genderless bigicon"></i></span>
+                                <div class="col-md-8">
+                                    {{ Form::label('proveedor_id', 'categoria del producto')}}
+                                    {{ Form::select('proveedor_id', $tableProductos, Request::old('proveedor_id'),  
+                                        array('class' => 'form-control')) }}
+                                </div>
+                            </div>
                                
                             <div class="form-group">
                                 <div class="col-md-12 text-left">

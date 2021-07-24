@@ -66,7 +66,17 @@
                                     {{ Form::select('categorias_id', $tableProductos, Request::old('categorias_id'),  
                                         array('class' => 'form-control')) }}
                                 </div>
-                            </div>      
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-4 text-center"><i class="fa fa-key bigicon"></i></span>
+                                <div class="col-md-8">
+                                    {{ Form::label('proveedor_id', 'proveedor') }}
+                                    {{ Form::select('proveedor_id', $tablePProductos, Request::old('proveedor_id'),  
+                                        array('class' => 'form-control')) }}
+                                </div>
+                            </div> 
+
                             <div class="form-group">
                                 <div class="col-md-12 text-left">
                                     {{ Form::submit('Registrar Producto', ['class' => 'btn btn-success'] ) }}

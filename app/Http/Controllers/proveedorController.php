@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 use Redirect;
 use Illuminate\Support\Facades\DB;
-// use App\Models\Proveedor;
+use App\Models\Proveedor;
 
 class proveedorController extends Controller
 {

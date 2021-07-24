@@ -41,17 +41,17 @@ Route::group(['middleware' => ['auth'] ], function(){
     Route::resource('Productos', 'productosController');
     Route::resource('Categoria', 'categoriaController');
     Route::resource('Noticias', 'noticiasController');
-    // Route::resource('Proveedor', 'proveedorController');
+    Route::resource('Proveedor', 'proveedorController');
     Route::resource('Conocenos', 'ConocenosController');
     Route::resource('Ventas', 'VentasController');
     Route::resource('DetalleVentas', 'Detalle_VentasController');
     Route::resource('Carrito', 'CarritoController');
 
 
-Route::post('/agregarCarrito', 'juegosController@agregarCarrito')
+Route::post('/agregarCarrito', 'productosController@agregarCarrito')
 ->name('agregarCarrito');
 
-Route::post('/ConcretarVenta', 'juegosController@ConcretarVenta')
+Route::post('/ConcretarVenta', 'productosController@ConcretarVenta')
 ->name('ConcretarVenta');
 
 Route::post('/quitarCarrito', 'CarritoController@quitarCarrito')

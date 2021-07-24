@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/fonts.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/stylesG.css') }}" rel="stylesheet" />
     </head>
     <body id="page-top">
@@ -107,7 +108,7 @@
         <!-- Masthead-->
 
 
-        <section class="signup-admin">
+        <section class="signup-usuario">
             <div class="container">
                 <!-- Featured Project Row-->
                 <div class="row">

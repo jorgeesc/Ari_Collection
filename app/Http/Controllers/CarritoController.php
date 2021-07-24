@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 use Session;
 Use Redirect;
 use Illuminate\Support\Facades\DB;
-use App\Models\Juegos;
+use App\Models\Productos;
 use App\Models\Proveedor;
 use App\Models\Genero;
 use App\Models\venta;
 use App\Models\detalle_venta;
-use App\Http\Controllers\juegosController;
+use App\Http\Controllers\productosController;
 
 
 class CarritoController extends Controller

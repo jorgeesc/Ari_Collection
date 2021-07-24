@@ -11,16 +11,16 @@ class Productos extends Model
 
     protected $table = 'productos';
 
-    protected $fillable = ['nombre', 'descripcion', 'precio', 'status', 'stock','categorias_id', 'imgNombreVirtual', 'imgNombreFisico'];
+    protected $fillable = ['nombre', 'descripcion', 'precio', 'status', 'stock','categorias_id', 'proveedor_id', 'imgNombreVirtual', 'imgNombreFisico'];
 
     public function getCategoria()
     {
                             // Modelo de referencia, campo local, campo foráneo 
         return $this->belongsTo('App\Models\Categoria','categorias_id','id');
     }
-    // public function getProveedor()
-    // {
-    //                         // Modelo de referencia, campo local, campo foráneo 
-    //     return $this->belongsTo('App\Models\Proveedor','proveedor_id','id');
-    // }
+    public function getProveedor()
+    {
+                            // Modelo de referencia, campo local, campo foráneo 
+        return $this->belongsTo('App\Models\Proveedor','proveedor_id','id');
+    }
 }

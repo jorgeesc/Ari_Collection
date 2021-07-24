@@ -16,6 +16,7 @@
     <thead>
         <tr>
             <th>Nombre</th>
+            <th>Telefono</th>
             <th>Proveedor</th>
         </tr>
     </thead>
@@ -25,6 +26,11 @@
                 <td>
                     <a href="{{route('Proveedor.show', $rowProveedor->id)}}">{{$rowProveedor->nombre}}</a>
                 </td>
+
+                  <td>
+                    {{$rowProveedor->telefono}}</a>
+                </td>
+
                 <td>
                         <img src="{{ asset('storage/'.$rowProveedor->imgNombreFisico )}}" width="20%">
                     </td>

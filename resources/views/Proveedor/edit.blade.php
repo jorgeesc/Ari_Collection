@@ -24,10 +24,18 @@
            array('class' => 'form-control', 'required'=>true)) }}
     </div>
 
-    <div class="form-group col-md-4">
+    <!-- <div class="form-group col-md-4">
         {{ Form::label('imagen', 'Imagen')}} <br>
         {{ Form::file('imagen', ['accept'=>"image/x-png,image/gif,image/jpeg"]) }} <br>
-    </div>
+    </div> -->
+
+    <div class="form-group col-md-4">
+{{ Form::label('telefono', 'telefono')}}
+{{ Form::text('telefono', Request::old('telefono'),
+           array('class' => 'form-control', 'required'=>true, 'maxlength'=> 30)) }} <br>
+
+
+</div>
 
 </div>
 
