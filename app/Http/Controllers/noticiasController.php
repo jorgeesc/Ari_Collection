@@ -8,6 +8,7 @@ use Session;
 Use Redirect;
 use Illuminate\Support\Facades\DB;
 use App\Models\Noticias;
+use App\Models\userEloquent;
 
 class noticiasController extends Controller
 {
@@ -22,8 +23,13 @@ class noticiasController extends Controller
      */
     public function index()
     {
+        if ( \Auth::user()->rol_id == 2) {
         $tableNoticias = Noticias::all();
         return view('Noticias.index',["tableNoticias" => $tableNoticias]);
+        }else{
+        $tableNoticias = Noticias::all();
+        return view('Noticias.promociones',["tableNoticias" => $tableNoticias]);
+        }
     }
 
     /**

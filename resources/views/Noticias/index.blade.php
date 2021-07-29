@@ -17,7 +17,6 @@
     <thead>
         <tr>
             <th>Nombre</th> 
-            <th>Descripción</th>
             <th>Fuente</th>
             <th>Portada</th>
         </tr>
@@ -26,50 +25,19 @@
         @foreach($tableNoticias as $rowNoticias)
             <tr>
                 <td><a href="{{route('Noticias.show', $rowNoticias->id)}}">{{$rowNoticias->nombre}}</a></td>
-                <td>
-                    {{$rowNoticias->descripcion}}
-                    
-                </td>
                 <td>{{$rowNoticias->fuente}}</td>
                 <td>
                         <a href="{{route('Noticias.show', $rowNoticias->id)}}"><img src="{{ asset('storage/'.$rowNoticias->imgNombreFisico )}}" width="20%"></a>
                     </td>
             </tr>
+             </tbody>
         @endforeach
-    </tbody>
+   
 </table>
 </div>
                 </div>
         </div>
     </div>
 </div>
-
-@else
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-<div class="card-header"><center><h1>Breaking News</h1></center></div>
-<div class="card-body">
-@foreach($tableNoticias as $rowNoticias)
-                <hr><center><td><h2>{{$rowNoticias->nombre}}</h2></td></center><br>
-<tbody> 
-
-    <center><tr>
-                <td>
-                    <img src="{{ asset('storage/'.$rowNoticias->imgNombreFisico )}}" width="30%">
-                </td><br>
-                <th>Desarrollo </th><td>{{$rowNoticias->descripcion}}</td><br>
-                <th>Fuente </th><td>{{$rowNoticias->fuente}}</td>
-            </tr>
-            </center>
-        @endforeach
-    </tbody>
-
 @endif
-</div>
-                </div>
-        </div>
-    </div>
-</div>
 @endsection
