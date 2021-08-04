@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Session;
 Use Redirect;
-use App\Models\Juegos;
+use App\Models\Productos;
 use App\Models\Proveedor;
 use App\Models\Genero;
 use App\Models\venta;

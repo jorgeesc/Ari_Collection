@@ -12,7 +12,9 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ asset('css/toastr/toastr.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/stylesG.css') }}" rel="stylesheet" />
     </head>
@@ -41,12 +43,7 @@
                         
                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Noticias.index') }}">Publicidad</a></li>
 
-                        
-
-
-
-
-                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('DetalleVentas.index') }}">Ventas</a></li> -->
+                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('DetalleVentas.index') }}">Ventas</a></li>
                         
                         @else
 
@@ -130,5 +127,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/toastr/toastr.min.js"></script>
+
+
+        <script>
+            toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "3500",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                toastr["success"]("Disfruta, Navega, Conoce!", "Bienvenido!");
+        </script>
     </body>
 </html>

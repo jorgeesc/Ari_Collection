@@ -5,14 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">{{ __('Proveedor') }}</div>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Proveedor') }}</legend>
 <div class="card-body">
     
-<a href="{{route('Proveedor.create')}}">Registrar Proveedor</a> <br> <br>
+<a href="{{route('Proveedor.create')}}" class="btn-sm btn-info">Registrar Proveedor</a> <br> <br>
 @if(Session::has('message'))
       {{ Session::get('message') }} <br><br>
 @endif
-<table class="table table-striped">
+<div class="panel-body p-20">
+<table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
             <th>Nombre</th>

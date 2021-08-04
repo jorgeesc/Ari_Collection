@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card border-info mb-3" style="max-width: 65rem;">
-                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Creación de Juegos') }}</legend>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Creación de Productos') }}</legend>
                     <div class="card-body text-info">
                         <a href="{{URL::to('Productos')}}"> Regresar</a><br><br>
                             {{HTML::ul($errors->all())}}

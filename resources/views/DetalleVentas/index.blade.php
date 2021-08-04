@@ -3,23 +3,24 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-9">
             <div class="card">
-                <div class="card-header">{{ __('Ventas') }}</div>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Detalle de ventas') }}</legend>
 <div class="card-body">
 
 @if(Session::has('message'))
       {{ Session::get('message') }} <br><br>
 @endif
-<table class="table table-striped">
+<div class="panel-body p-20">
+<table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
   
             <th>precio</th>
             <th>cantidad</th>
-            <th>Juego</th>
-            <th>Venta Total</th>
+            <th>producto</th>
             <th>ID de venta</th>
+            <th>Fecha</th>
        
         </tr>
     </thead>
@@ -36,15 +37,16 @@
                 </td>
 
                 <td>
-                    {{$rowDetalleVenta->getJuegos->nombre}}
-                </td>
-
-                <td>
-                    {{$rowDetalleVenta->getVenta->total}}
+                    {{$rowDetalleVenta->getProductos->nombre}}
+                   
                 </td>
 
                 <td>
                     {{$rowDetalleVenta->venta_id}}
+                </td>
+
+                <td>
+                    {{$rowDetalleVenta->getVenta->created_at}}
                 </td>
 
               

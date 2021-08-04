@@ -6,10 +6,10 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Juegos') }}</legend>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Productos') }}</legend>
 <div class="card-body">
 
-<a href="{{route('Productos.create')}}">Registrar Producto</a> <br> <br>
+<a href="{{route('Productos.create')}}" class="btn-sm btn-info">Registrar Producto</a> <br> <br>
 @if(Session::has('message'))
       {{ Session::get('message') }} <br><br>
 @endif
@@ -21,10 +21,11 @@
 <input type="text" name="nombre" value="{{$filtroNombre}}" class="form-control">
 </div>
 </div>
-<button>Buscar</button>
+<button class="btn-lg btn-success">Buscar</button>
 </form>
 
-<table class="table table-striped">
+<div class="panel-body p-20">
+<table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
             <th>Nombre</th>

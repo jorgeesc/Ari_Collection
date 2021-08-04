@@ -6,11 +6,12 @@
             <div class="card border-info mb-3" style="max-width: 65rem; , max-heigth: 60rem;">
                 <legend class="card header text-white bg-info mb-2 text-center">{{ __('Roles') }}</legend>
                     <div class="card-body text-info">
-                        <a href="{{route('Roles.create')}}"> Registrar Rol</a><br><br>
+                        <a href="{{route('Roles.create')}}" class="btn-sm btn-info"> Registrar Rol</a><br><br>
 @if(Session::has('message'))
       {{ Session::get('message') }} <br><br>
 @endif
-<table class="table table-striped">
+<div class="panel-body p-20">
+<table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
             <th>Rol</th>

@@ -57,8 +57,8 @@ array('class' => 'form-control')) }}
                 
                 </div>
             </div>
-            {{ Form::hidden('cantidad', 1 ,
-array('class' => 'form-control', 'required'=>true)) }} 
+            {{ Form::number('cantidad', 1 ,
+array('class' => 'form-control', 'id'=>'cantidad', 'onchange'=>'javascript: validaDias();', 'value'=>'1', 'min'=>'1', 'required'=>true)) }} 
  <br><br>
         </div>
 

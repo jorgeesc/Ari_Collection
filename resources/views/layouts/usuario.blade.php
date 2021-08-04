@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ asset('css/toastr/toastr.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/fonts.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/stylesG.css') }}" rel="stylesheet" />
@@ -131,5 +132,35 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/toastr/toastr.min.js"></script>
+
+        <script type="text/javascript">
+            
+            function validaDias(){
+    //alert($("#Dias").val());
+    if($("#cantidad").val()==1){
+        Command: toastr["info"]("La cantidad minima que puedes agregar es 1", "Aviso!")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-center",
+  "preventDuplicates": true,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+}
+    
+}
+        </script>
     </body>
 </html>

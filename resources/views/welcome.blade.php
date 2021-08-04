@@ -1,5 +1,7 @@
 @extends('layouts/public')
-<!-- @section('content') -->
+<!-- @section('content')
 
-        <!-- /.row -->
-<!-- @endsection -->
+
+
+   
+@endsection -->

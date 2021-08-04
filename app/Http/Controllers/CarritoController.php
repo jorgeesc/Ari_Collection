@@ -30,8 +30,16 @@ class CarritoController extends Controller
         if(!$carrito){
         $carrito = [];
         }
+            
+        $venta = new venta();    
+        foreach ($carrito as $value) {
+        $venta->cantidad=$value['cantidad'];
+        $venta->precio=$value['precio'];
 
-        return view('Carrito.index',["carrito"=>$carrito]);
+        $venta->total+=($value['precio']*$value['cantidad']);
+
+    }
+        return view('Carrito.index',["carrito"=>$carrito, "venta"=>$venta]);
 
 
     }

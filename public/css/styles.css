@@ -5493,6 +5493,23 @@ a.close.disabled {
   display: none;
 }
 
+.toast-success {
+  background-color: #27ae60;
+}
+
+.toast-error {
+  background-color: #e74c3c;
+}
+
+.toast-warning {
+  background-color: #f39c12;
+}
+
+.toast-info {
+  background-color: #5bc0de;
+}
+
+
 .toast-header {
   display: flex;
   align-items: center;

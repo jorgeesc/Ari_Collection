@@ -12,16 +12,16 @@ class venta extends Model
     protected $table = 'venta';
     protected $fillable = ['total', 'status', 'user_id','name'];
 
-     public function getJuegos()
+     public function getProductos()
     {
                             // Modelo de referencia, campo local, campo foráneo 
-        return $this->belongsTo('App\Models\Juegos','juegos_id','id');
+        return $this->belongsTo('App\Models\Productos','productos_id','id');
     }
 
      public function getVenta()
     {
                             // Modelo de referencia, campo local, campo foráneo 
-        return $this->belongsTo('App\Models\Venta','venta_id','id');
+        return $this->belongsTo('App\Models\venta','venta_id','id');
     }
 
      public function getUsu()

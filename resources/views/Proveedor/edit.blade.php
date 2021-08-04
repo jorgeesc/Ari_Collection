@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Proveedor') }}</div>
+                <legend class="card header text-white bg-info mb-2 text-center">{{ __('Proveedor') }}</legend>
 <div class="card-body">
 
 <a href="{{ route('Proveedor.show', $modelo->id) }}">Regresar</a> <br> <br>

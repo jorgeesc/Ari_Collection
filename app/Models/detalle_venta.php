@@ -10,13 +10,13 @@ class detalle_venta extends Model
     use HasFactory;
 
     protected $table = 'detalle_venta';
-    protected $fillable = ['precio', 'cantidad', 'juegos_id', 'venta_id','user_id'];
+    protected $fillable = ['precio', 'cantidad', 'productos_id', 'venta_id','user_id'];
 
 
-        public function getJuegos()
+        public function getProductos()
     {
                             // Modelo de referencia, campo local, campo foráneo 
-        return $this->belongsTo('App\Models\Juegos','juegos_id','id');
+        return $this->belongsTo('App\Models\Productos','productos_id','id');
     }
 
      public function getVenta()

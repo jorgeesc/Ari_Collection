@@ -11,8 +11,8 @@ use App\Models\Productos;
 use App\Models\Proveedor;
 use App\Models\Categoria;
 use App\Models\userEloquent;
-// use App\Models\venta;
-// use App\Models\detalle_venta;
+use App\Models\venta;
+use App\Models\detalle_venta;
 
 
 
@@ -210,7 +210,8 @@ class productosController extends Controller
         $request->session()->put('carrito', $carrito);
         // echo var_dump($carrito);
 
-        Session::flash('message', 'Producto agregado');
+
+
         return Redirect::to('Productos');
 
 
