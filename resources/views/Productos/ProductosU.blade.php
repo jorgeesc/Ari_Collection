@@ -87,10 +87,10 @@ array('class' => 'form-control')) }} <br>
         </button>
       </div>
       <div class="modal-body">
-        Juego agregado con exito!
+        Producto agregado con exito!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

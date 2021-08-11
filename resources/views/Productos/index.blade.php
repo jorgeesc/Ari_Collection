@@ -24,7 +24,7 @@
 <button class="btn-lg btn-success">Buscar</button>
 </form>
 
-<div class="panel-body p-20">
+<div class="panel-body p-25">
 <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
@@ -36,6 +36,7 @@
             <th>Portada</th>
             <th>Categoria</th>
             <th>Proveedor</th>
+            
         </tr>
     </thead>
     <tbody>

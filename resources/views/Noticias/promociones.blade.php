@@ -8,7 +8,8 @@
 <div class="col-md-6 col-sm-10">
             <div class="product-grid">
                 <div class="product-image">
-                    <h5><div class="text-white">{{$rowNoticias->nombre}}</div></h5>
+                    <center><h4><div style="font-family:cursive,sans-serif;background-color: #ff388d;" class="card-header text-white">{{$rowNoticias->nombre}}</div></h4></center>
+                
                         <br>
                     <a href="#" >
                         <img src="{{ asset('storage/'.$rowNoticias->imgNombreFisico )}}" width="30%"> 
@@ -49,4 +50,6 @@
         </div>
     </div>
 </div>
+
+
 @endsection

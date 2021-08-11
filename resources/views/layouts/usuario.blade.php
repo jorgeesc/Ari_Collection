@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title class="ee">Ari Collection</title>
-        <link rel="icon" type="image/x-icon" href="../assets/img/DATAPLAY.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/ari.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -17,8 +17,12 @@
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/fonts.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/stylesG.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/carga.css') }}" rel="stylesheet" />
     </head>
     <body id="page-top">
+                <div id="contenedor_carga">
+            <div id="carga"></div>
+        </div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
@@ -31,7 +35,7 @@
                     <ul class="navbar-nav ml-auto">
                         @if( \Auth::user()->rol_id== 2 )
 
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Roles.index') }}">Roles</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger"  href="{{ route('Roles.index') }}">Roles</a></li>
 
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('users.index') }}">Usuarios</a></li>
 
@@ -53,18 +57,18 @@
                         @else
 
                         
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Productos.index') }}">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link  f js-scroll-trigger" style="color: black; font-size: 20px;" href="{{ route('Productos.index') }}">Productos</a></li>
 
-                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Noticias.index') }}">Noticias</a></li>
+                         <li class="nav-item"><a class="nav-link  f js-scroll-trigger" style="color: black; font-size: 20px;" href="{{ route('Noticias.index') }}">Noticias</a></li>
 
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Conocenos.index') }}">Conocenos</a></li>
+                        <li class="nav-item"><a class="nav-link  f s-scroll-trigger"  style="color: black; font-size: 20px;"href="{{ route('Conocenos.index') }}">Conocenos</a></li>
 
-                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('Carrito.index') }}">Carrito</a></li>
+                          <li class="nav-item"><a class="nav-link  f js-scroll-trigger" style="color: black; font-size: 20px;" href="{{ route('Carrito.index') }}">Carrito</a></li>
                         
                         @endif
                           @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
+                                <a class="nav-link" style="color: black;" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
@@ -75,7 +79,7 @@
                            
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" style="color: black; font-size: 20px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -124,7 +128,7 @@
 
 
 
-        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Ari Collection 2021</div></footer>
+        <footer class="footer bg-white small text-center text-black-100"><div class="container">Copyright © Ari Collection 2021</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -160,6 +164,14 @@ toastr.options = {
 }
 }
     
+}
+
+
+                window.onload = function(){
+    var contenedor = document.getElementById('contenedor_carga');
+
+    contenedor.style.visibility = 'hidden';
+    contenedor.style.opacity = '0';
 }
         </script>
     </body>

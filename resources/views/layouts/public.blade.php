@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Ari Collection</title>
-        <link rel="icon" type="image/x-icon" href="../assets/img/DATAPLAY.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/ari.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -15,8 +15,12 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+          <link href="{{ asset('css/carga.css') }}" rel="stylesheet" />
     </head>
     <body id="page-top">
+          <div id="contenedor_carga">
+            <div id="carga"></div>
+        </div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
@@ -36,11 +40,11 @@
 
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" style="color: black; font-size: 20px"  href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link"  style="color: black; font-size: 20px" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
 
                              
@@ -188,10 +192,8 @@
                                 </g>
                             </g>
                         </svg>
-                        <h4 class="relative mt-6 text-lg font-bold">ttttttttttttt</h4>
-                        <p class="relative mt-2 text-base text-center text-gray-600">Automate your workflow with these
-                            top of the
-                            line marketing tools.</p>
+                        <h4 class="relative mt-6 text-lg font-bold">Disfruta</h4>
+                        <p class="relative mt-2 text-base text-center text-gray-600">Navega de manera interactiva por nuestro sitio.</p>
                         
                     </div>
                 </div>
@@ -250,10 +252,8 @@
                                 </g>
                             </g>
                         </svg>
-                        <h4 class="relative mt-6 text-lg font-bold">Machine Learning</h4>
-                        <p class="relative mt-2 text-base text-center text-gray-600">Your Marketing tools will learn how
-                            to better
-                            convert and sell.</p>
+                        <h4 class="relative mt-6 text-lg font-bold">Consulta</h4>
+                        <p class="relative mt-2 text-base text-center text-gray-600">Puedes consultar informes en nuestros diferentes contactos</p>
                        
                     </div>
                 </div>
@@ -312,10 +312,8 @@
                                 </g>
                             </g>
                         </svg>
-                        <h4 class="relative mt-6 text-lg font-bold">Smart Notifications</h4>
-                        <p class="relative mt-2 text-base text-center text-gray-600">Our smart notifications will notify
-                            you when
-                            users convert.</p>
+                        <h4 class="relative mt-6 text-lg font-bold">Conoce</h4>
+                        <p class="relative mt-2 text-base text-center text-gray-600">Visualiza nuestros productos y ofertas semanales.</p>
                      
                     </div>
                 </div>
@@ -356,6 +354,18 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        
+               <script type="text/javascript">
+        
+
+                window.onload = function(){
+    var contenedor = document.getElementById('contenedor_carga');
+
+    contenedor.style.visibility = 'hidden';
+    contenedor.style.opacity = '0';
+}
+        </script>
         
     </body>
 </html>

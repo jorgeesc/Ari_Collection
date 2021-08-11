@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title class="ee">Ari Collection</title>
-        <link rel="icon" type="image/x-icon" href="../assets/img/DATAPLAY.ico" />
+        
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -17,8 +17,12 @@
         <link href="{{ asset('css/toastr/toastr.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/stylesG.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/carga.css') }}" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <div id="contenedor_carga">
+            <div id="carga"></div>
+        </div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
@@ -130,25 +134,15 @@
         <script src="js/toastr/toastr.min.js"></script>
 
 
-        <script>
-            toastr.options = {
-                    "closeButton": true,
-                    "debug": false,
-                    "newestOnTop": false,
-                    "progressBar": false,
-                    "positionClass": "toast-top-right",
-                    "preventDuplicates": false,
-                    "onclick": null,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "3500",
-                    "extendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "linear",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut"
-                }
-                toastr["success"]("Disfruta, Navega, Conoce!", "Bienvenido!");
+        <script type="text/javascript">
+        
+
+                window.onload = function(){
+    var contenedor = document.getElementById('contenedor_carga');
+
+    contenedor.style.visibility = 'hidden';
+    contenedor.style.opacity = '0';
+}
         </script>
     </body>
 </html>

@@ -3978,11 +3978,13 @@ input[type=button].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  color: black;
 }
 
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  color: black;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -4073,7 +4075,8 @@ input[type=button].btn-block {
 }
 
 .navbar .container{
-    background-color: rgba(10,10,10,.2);
+    background-color: rgba(255, 144, 230,.5);
+    color: #0000;
 }
 
 .navbar-brand {
@@ -4089,6 +4092,7 @@ input[type=button].btn-block {
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
 }
+
 
 .navbar-nav {
   display: flex;
@@ -4417,7 +4421,7 @@ input[type=button].btn-block {
   color: rgba(255, 255, 255, 0.5);
 }
 .navbar-dark .navbar-text a {
-  color: #fff;
+  color: black;
 }
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
@@ -10121,7 +10125,7 @@ h3 {
   }
 
   .container {
-    min-width: 992px !important;
+    min-width: 100%;
   }
 
   .navbar {
@@ -10169,9 +10173,9 @@ body {
   background-color: #fff;
 }
 #mainNav .navbar-toggler {
-  font-size: 80%;
+  font-size: 100%;
   padding: 0.75rem;
-  color: #64a19d;
+  color: black;
   border: 1px solid #64a19d;
 }
 #mainNav .navbar-toggler:focus {
@@ -10183,9 +10187,9 @@ body {
   padding: 0.9rem 0;
 }
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(#fff, 80%);
+  color: fade(#000, 80%);
   outline: none;
-  background-color: transparent;
+  background-color: pink;
 }
 #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
   outline: none;
@@ -10212,7 +10216,7 @@ body {
     color: rgba(255, 255, 255, 0.75);
   }
   #mainNav .nav-link:active {
-    color: #fff;
+    color: #000;
   }
   #mainNav.navbar-shrink {
     background-color: #fff;
@@ -10257,7 +10261,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 75%, #000000 100%), url("../assets/img/fondoE.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10342,7 +10346,7 @@ body {
 
 .signup-section{
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/fondoL.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/fondoE.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10353,7 +10357,7 @@ body {
 
 .signup-admin{
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/Fondo-Ad.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 75%, #000000 100%), url("../assets/img/fondo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10362,7 +10366,7 @@ body {
 
 .signup-usuario{
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/fondoE.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 75%, #000000 100%), url("../assets/img/fondo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10370,7 +10374,6 @@ body {
 }
 
 .signup-usuario .form-inline input {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10461,7 +10464,7 @@ body {
 .social1{
   position: fixed;
   left: 0;
-  top: 200px;
+  top: 400px;
   z-index: 2000;
 }
 
